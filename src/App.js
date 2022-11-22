@@ -33,7 +33,7 @@ const App = () => {
   //replace changing (R$ ) per ''
   const total = data.basket
     .map((item) => Number(item.price.replace('R$ ', '')))
-    .reduce((a, b) => a + b);
+    .reduce((previousValue, actualElement) => previousValue + actualElement);
 
   return (
     <div>
